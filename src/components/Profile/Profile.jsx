@@ -11,7 +11,7 @@ const Profile = () => {
     <div className="profile h-screen md:ms-5 px-5 py-10 md:py-4  relative px-auto md:sticky top-0">
       <div className="pro_top md:text-center  mb-2 ">
         <h2 className=" text-4xl">
-          Mari.<span>45</span>{" "}
+          Mari.<span>52</span>{" "}
         </h2>
       </div>
 

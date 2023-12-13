@@ -2,6 +2,7 @@ import React from "react";
 import AboutMe from "../AboutMe/AboutMe";
 import Home from "../Home/Home";
 import Resume from "../Resume/Resume";
+import Service from "../Service/Service";
 import Skil from "../Skill/Skil";
 import "./ScrollPage.css";
 
@@ -11,6 +12,7 @@ const ScrollPage = () => {
       <Home></Home>
       <AboutMe></AboutMe>
       <Resume></Resume>
+      <Service></Service>
       <Skil></Skil>
     </div>
   );
