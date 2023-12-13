@@ -1,0 +1,4 @@
+.scrollPage {
+  position: relative;
+  scroll-behavior: smooth;
+}
