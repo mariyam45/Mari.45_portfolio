@@ -42,7 +42,7 @@ input::placeholder {
 .msg_btn {
   bottom: 2%;
   border-radius: 30px !important;
-  background: #28e98c;
+  background: #28e98c !important;
   color: black !important;
   /* background: none !important; */
   margin-left: 0.3rem;
