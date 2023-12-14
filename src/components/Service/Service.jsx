@@ -5,13 +5,16 @@ import { Link } from "react-router-dom";
 import "./Service.css";
 const Service = () => {
   return (
-    <div className="service">
-      <div className="heading_title flex  w-2/6  md:w-1/6 md:ps-6 ps-8 ">
+    <div className="service mx-auto ms-0">
+      <div className="heading_title flex  w-2/6  md:w-1/6 md:ps-6 ps-8 py-3 ">
         <FontAwesomeIcon icon={faHandHoldingHand} />
-        <p className="ms-2">RESUME</p>
+        <p className="ms-2">Services</p>
       </div>
-      <div className="service_cont">
-        <div className="ser_card mb-6">
+      <h1>
+        My <span>Specializations</span>
+      </h1>
+      <div className="service_cont mt-10">
+        <div className="ser_card mb-6 ">
           <div className="flex justify-between align-middle">
             <h4>Website Development</h4>
             <box-icon name="code-alt" color="#28e98c"></box-icon>

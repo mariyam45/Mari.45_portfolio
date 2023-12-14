@@ -9,6 +9,7 @@ const AboutMe = () => {
     <div
       className="about scroll-animation animate__animated  animate__fadeInLeft animate__delay-2s"
       data-animation="fade_from_right"
+      id="about"
     >
       <div className="heading_title flex     w-2/6  md:w-1/6">
         <FontAwesomeIcon icon={faUser} />

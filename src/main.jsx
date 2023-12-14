@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AboutMe from "./components/AboutMe/AboutMe.jsx";
 import Layout from "./components/Layout/Layout.jsx";
 import ScrollPage from "./components/ScrollPage/ScrollPage.jsx";
 import Skil from "./components/Skill/Skil.jsx";
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/skils",
         element: <Skil></Skil>,
+      },
+      {
+        path: "/about",
+        element: <AboutMe></AboutMe>,
       },
     ],
   },

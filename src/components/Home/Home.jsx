@@ -6,7 +6,10 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div className="home md:mb-14 mb-6 animate__animated  animate__fadeInDown">
+    <div
+      className="home md:mb-14 mb-6 animate__animated  animate__fadeInDown"
+      id="home"
+    >
       <div className="heading_title flex w-2/6  md:w-1/6">
         <FontAwesomeIcon icon={faHome} />
         <p className="ms-2">INTRODUCE</p>

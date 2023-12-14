@@ -80,15 +80,15 @@ const SideNav = () => {
         </div>
       </div>
 
-      <div className="main_nav text-end sticky top-0">
+      <div className="main_nav text-end sticky top-0 md:block hidden">
         <ul className="menu menu-sm  mt-3 p-2">
           <li>
-            <Link className="tooltip tooltip-left" data-tip="Home">
+            <Link to="/" className="tooltip tooltip-left" data-tip="Home">
               <FontAwesomeIcon icon={faHome} />
             </Link>
           </li>
           <li>
-            <Link className="tooltip tooltip-left" data-tip="About">
+            <Link to="/about" className="tooltip tooltip-left" data-tip="About">
               <FontAwesomeIcon icon={faUser} />
             </Link>
           </li>
@@ -98,13 +98,21 @@ const SideNav = () => {
             </Link>
           </li>
           <li>
-            <Link className="tooltip tooltip-left" data-tip="Services">
+            <Link
+              to="/services"
+              className="tooltip tooltip-left"
+              data-tip="Services"
+            >
               {" "}
               <FontAwesomeIcon icon={faHandHoldingHand} />
             </Link>
           </li>
           <li>
-            <Link className="tooltip tooltip-left" data-tip="Skils">
+            <Link
+              to={"/skils"}
+              className="tooltip tooltip-left"
+              data-tip="Skils"
+            >
               {" "}
               <FontAwesomeIcon icon={faMarker} />
             </Link>
