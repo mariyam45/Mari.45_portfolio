@@ -11,6 +11,7 @@ const Resume = () => {
       data-aos-duration="600"
       // data-aos-offset="100"
       data-aos-easing="linear"
+      id="resume"
     >
       <div className="heading_title flex  w-2/6  md:w-1/6">
         <FontAwesomeIcon icon={faFile} />
@@ -19,7 +20,13 @@ const Resume = () => {
       <h1>
         Education & <span>Experience</span>
       </h1>
-      <div className="edu1 ">
+      <div
+        className="edu1 "
+        data-aos="fade-right"
+        data-aos-duration="600"
+        // data-aos-offset="100"
+        data-aos-easing="linear"
+      >
         <div className="icons">
           <FontAwesomeIcon icon={faCircle} />
         </div>
@@ -29,7 +36,13 @@ const Resume = () => {
           <small>Brunodee Agency</small>
         </div>
       </div>
-      <div className="edu1 ">
+      <div
+        className="edu1 "
+        data-aos="fade-right"
+        data-aos-duration="600"
+        // data-aos-offset="100"
+        data-aos-easing="linear"
+      >
         <div className="icons">
           <FontAwesomeIcon icon={faCircle} />
         </div>

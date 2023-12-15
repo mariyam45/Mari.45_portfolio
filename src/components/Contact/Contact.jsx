@@ -6,6 +6,7 @@ import "./Contact.css";
 const Contact = () => {
   return (
     <div
+      id="contact"
       className="contact "
       data-aos="fade-up"
       data-aos-duration="600"
@@ -138,13 +139,13 @@ const Contact = () => {
         <input type="file" name="" id="" />
       </div> */}
       <div
-        className="last_btn"
-        data-aos="fade-up"
-        data-aos-duration="600"
-        // data-aos-offset="100"
-        data-aos-easing="linear"
+      // className="last_btn"
+      // data-aos="fade-up"
+      // data-aos-duration="600"
+      // data-aos-offset="100"
+      // data-aos-easing="linear"
       >
-        <button className="btn  w-2/6 msg_btn transition duration-500 ease-in-out mt-8 mb-8">
+        <button className="btn  w-2/6 msg_btn transition duration-500 ease-in-out mt-8 mb-6">
           {/* <FontAwesomeIcon icon={faEnvelope} /> */}
           Send Message
         </button>

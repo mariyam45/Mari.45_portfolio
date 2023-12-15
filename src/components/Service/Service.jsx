@@ -1,11 +1,12 @@
 import { faHandHoldingHand } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Service.css";
 const Service = () => {
   return (
-    <div className="service mx-auto ms-0">
+    <div className="service mx-auto ms-0 overflow-hidden" id="service">
       <div
         className="heading_title flex  w-2/6  md:w-1/6 md:ps-6 ps-8 py-3 "
         data-aos="fade-right"

@@ -9,6 +9,7 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { Link } from "react-router-dom";
 import "./SideNav.css";
@@ -16,7 +17,7 @@ import "./SideNav.css";
 
 const SideNav = () => {
   return (
-    <div className="sideBar sticky top-0">
+    <div className="sideBar md:fixed  right-0">
       {/* <div className="bx bx-menu" id="menu-icon"></div>
 
       <ul className="navbar">
@@ -34,7 +35,7 @@ const SideNav = () => {
         </li>
       </ul> */}
 
-      <div className="navbar-start md:hidden absolute sticky bottom-0 right-1 ">
+      <div className="navbar-start md:hidden absolute top-0 bg-green-100  right-0 ">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <svg
@@ -83,50 +84,60 @@ const SideNav = () => {
       <div className="main_nav text-end sticky top-0 md:block hidden">
         <ul className="menu menu-sm  mt-3 p-2">
           <li>
-            <Link to="/" className="tooltip tooltip-left" data-tip="Home">
+            <a href="#home" className="tooltip tooltip-left" data-tip="Home">
               <FontAwesomeIcon icon={faHome} />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/about" className="tooltip tooltip-left" data-tip="About">
+            <a href="#about" className="tooltip tooltip-left" data-tip="About">
+              {" "}
               <FontAwesomeIcon icon={faUser} />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="tooltip tooltip-left" data-tip="Resume">
+            <a
+              href="#resume"
+              className="tooltip tooltip-left"
+              data-tip="Resume"
+            >
+              {" "}
               <FontAwesomeIcon icon={faFile} />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/services"
+            <a
+              href="#service"
               className="tooltip tooltip-left"
               data-tip="Services"
             >
               {" "}
               <FontAwesomeIcon icon={faHandHoldingHand} />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to={"/skils"}
-              className="tooltip tooltip-left"
-              data-tip="Skils"
-            >
+            <a href="#skil" className="tooltip tooltip-left" data-tip="Skils">
               {" "}
               <FontAwesomeIcon icon={faMarker} />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="tooltip tooltip-left" data-tip="Testimonial">
+            <a
+              href="#testimonial"
+              className="tooltip tooltip-left"
+              data-tip="Testimonial"
+            >
               <FontAwesomeIcon icon={faTableList} />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link className="tooltip tooltip-left" data-tip="Contact">
+            <a
+              href="#contact"
+              className="tooltip tooltip-left"
+              data-tip="Contact"
+            >
               {" "}
               <FontAwesomeIcon icon={faEnvelope} />
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
