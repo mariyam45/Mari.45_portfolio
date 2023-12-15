@@ -8,7 +8,7 @@ import "./Layout.css";
 const Layout = () => {
   return (
     <div className="screen grid-cols-1 md:grid-cols-[3fr_8fr_1fr]">
-      <Profile></Profile>
+      <Profile id="profile"></Profile>
       <Outlet></Outlet>
       <SideNav></SideNav>
     </div>

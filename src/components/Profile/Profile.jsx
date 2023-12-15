@@ -2,6 +2,7 @@
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "boxicons";
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import myimg from "../../../public/assets/mari21.png";
 import "./Profile.css";
@@ -9,9 +10,13 @@ import "./Profile.css";
 const Profile = () => {
   return (
     <div className="profile h-screen md:ms-5 px-5 py-10 md:py-4 2xl:pt-16   relative px-auto md:sticky top-0">
-      <div className="pro_top md:text-center  mb-2 ">
-        <h2 className=" text-4xl">
-          Mari.<span>52</span>{" "}
+      <div className="pro_top md:text-center   ">
+        {" "}
+        <h2 className=" text-4xl mb-4">
+          <a href="#">
+            {" "}
+            Mari.<span>52</span>{" "}
+          </a>
         </h2>
       </div>
 

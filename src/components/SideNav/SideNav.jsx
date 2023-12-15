@@ -11,7 +11,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import { Link } from "react-router-dom";
 import "./SideNav.css";
 // import "./SideNav.js";
 
@@ -35,9 +34,9 @@ const SideNav = () => {
         </li>
       </ul> */}
 
-      <div className="navbar-start md:hidden absolute top-0 bg-green-100  right-0 ">
+      <div className="navbar-end md:hidden fixed top-10   right-1 nav_sm text-end">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+          <div tabIndex={0} role="button" className=" icon_btn  ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -54,28 +53,28 @@ const SideNav = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2  "
+            className="menu menu_cont menu-md dropdown-content mt-3 z-[1] p-2   absolute right-0"
           >
             <li>
-              <Link to="/home">Home</Link>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <Link>About</Link>
+              <a href="#about">About</a>
             </li>
             <li>
-              <Link>Resume</Link>
+              <a href="#resume">Resume</a>
             </li>
             <li>
-              <Link>Services</Link>
+              <a href="#service">Service</a>
             </li>
             <li>
-              <Link>Skils</Link>
+              <a href="#skil">Skil</a>
             </li>
             <li>
-              <Link>Testimonial</Link>
+              <a href="#testimonial">Testimonial</a>
             </li>
             <li>
-              <Link>Contact</Link>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>

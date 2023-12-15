@@ -26,6 +26,16 @@
 .sideBar li:hover {
   color: #28e98c;
 }
+.nav_sm svg {
+  background: none !important;
+}
+.menu_cont {
+  background: #123826a2 !important;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  /* width: 100%; */
+}
 
 /* .sideBar li:active {
   color: #28e98c;
