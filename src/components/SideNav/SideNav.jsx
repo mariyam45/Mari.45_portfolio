@@ -70,8 +70,10 @@ const SideNav = () => {
             <li>
               <a href="#skil">Skil</a>
             </li>
-            <li>
-              <a href="#testimonial">Testimonial</a>
+            <li className="">
+              <a href="#testimonial" className="hidden">
+                Testimonial
+              </a>
             </li>
             <li>
               <a href="#contact">Contact</a>
@@ -122,7 +124,7 @@ const SideNav = () => {
           <li>
             <a
               href="#testimonial"
-              className="tooltip tooltip-left"
+              className="tooltip tooltip-left hidden"
               data-tip="Testimonial"
             >
               <FontAwesomeIcon icon={faTableList} />
