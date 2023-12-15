@@ -6,15 +6,32 @@ import "./Service.css";
 const Service = () => {
   return (
     <div className="service mx-auto ms-0">
-      <div className="heading_title flex  w-2/6  md:w-1/6 md:ps-6 ps-8 py-3 ">
+      <div
+        className="heading_title flex  w-2/6  md:w-1/6 md:ps-6 ps-8 py-3 "
+        data-aos="fade-right"
+        data-aos-duration="600"
+        // data-aos-offset="100"
+        data-aos-easing="linear"
+      >
         <FontAwesomeIcon icon={faHandHoldingHand} />
         <p className="ms-2">Services</p>
       </div>
-      <h1>
+      <h1
+        data-aos="fade-right"
+        data-aos-duration="600"
+        // data-aos-offset="100"
+        data-aos-easing="linear"
+      >
         My <span>Specializations</span>
       </h1>
       <div className="service_cont mt-10">
-        <div className="ser_card mb-6 ">
+        <div
+          className="ser_card mb-6 "
+          data-aos="fade-left"
+          data-aos-duration="600"
+          // data-aos-offset="100"
+          data-aos-easing="linear"
+        >
           <div className="flex justify-between align-middle">
             <h4>Website Development</h4>
             <box-icon name="code-alt" color="#28e98c"></box-icon>
@@ -24,7 +41,13 @@ const Service = () => {
             <small>Some Projects</small>
           </Link>
         </div>
-        <div className="ser_card">
+        <div
+          className="ser_card"
+          data-aos="fade-right"
+          data-aos-duration="600"
+          // data-aos-offset="100"
+          data-aos-easing="linear"
+        >
           <div className="flex justify-between align-middle">
             <h4>Graphics Design</h4>
             <box-icon type="logo" name="adobe" color="#28e98c"></box-icon>

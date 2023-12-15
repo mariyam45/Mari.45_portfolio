@@ -62,3 +62,16 @@ input::placeholder {
   color: #28e98c !important;
   background: none !important;
 }
+.select {
+  background: transparent !important;
+  padding-left: 0 !important;
+  color: #c7c7c7;
+  font-size: 1rem !important;
+}
+.select option {
+  background: #1f1f1f !important;
+  padding-left: 0 !important;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 1rem !important;
+  color: #c2c2c2;
+}

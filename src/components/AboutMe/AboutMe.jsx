@@ -7,8 +7,11 @@ import "./AboutMe.css";
 const AboutMe = () => {
   return (
     <div
-      className="about scroll-animation animate__animated  animate__fadeInLeft animate__delay-2s"
-      data-animation="fade_from_right"
+      className="about "
+      data-aos="fade-up"
+      data-aos-duration="600"
+      // data-aos-offset="100"
+      data-aos-easing="linear"
       id="about"
     >
       <div className="heading_title flex     w-2/6  md:w-1/6">

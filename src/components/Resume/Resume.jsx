@@ -5,7 +5,13 @@ import "./Resume.css";
 
 const Resume = () => {
   return (
-    <div className="resume">
+    <div
+      className="resume"
+      data-aos="fade-right"
+      data-aos-duration="600"
+      // data-aos-offset="100"
+      data-aos-easing="linear"
+    >
       <div className="heading_title flex  w-2/6  md:w-1/6">
         <FontAwesomeIcon icon={faFile} />
         <p className="ms-2">RESUME</p>

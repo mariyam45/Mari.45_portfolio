@@ -7,8 +7,11 @@ import "./Home.css";
 const Home = () => {
   return (
     <div
-      className="home md:mb-14 mb-6 animate__animated  animate__fadeInDown"
+      className="home md:mb-14 mb-6 "
       id="home"
+      data-aos="fade-down"
+      // data-aos-easing="linear"
+      data-aos-duration="700"
     >
       <div className="heading_title flex w-2/6  md:w-1/6">
         <FontAwesomeIcon icon={faHome} />

@@ -15,11 +15,22 @@ const Skil = () => {
   return (
     <div>
       <div className="skil">
-        <div className="heading_title flex  w-2/6  md:w-1/6 md:ps-7 ps-9 py-3">
+        <div
+          className="heading_title flex  w-2/6  md:w-1/6 md:ps-7 ps-9 py-3"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          // data-aos-offset="100"
+          data-aos-easing="linear"
+        >
           <FontAwesomeIcon icon={faPen} />
           <p className="ms-2">Skils</p>
         </div>
-        <h1>
+        <h1
+          data-aos="fade-up"
+          data-aos-duration="600"
+          // data-aos-offset="100"
+          data-aos-easing="linear"
+        >
           My <span>Advantages</span>
         </h1>
         <div className="skils_cont mt-10">
