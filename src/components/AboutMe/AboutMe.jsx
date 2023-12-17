@@ -20,14 +20,17 @@ const AboutMe = () => {
         <p className="ms-2">ABOUT</p>
       </div>
       <h1>
-        Every great design begin with an even <span>better story</span>
+        Somthing <span>About</span> me
       </h1>
       <p className="w-5/6">
-        Since beginning my journey as a freelance designer nearly 8 years ago,
-        I've done remote work for agencies, consulted for startups, and
-        collaborated with talented people to create digital products for both
-        business and consumer use. I'm quietly confident, naturally curious, and
-        perpetually working on improving my chopsone design problem at a time.
+        Hello, I am Marian, a font-end web developer and graphic designer. I
+        have been learning and practicing web development for a long time with
+        hard work and dedication. Along with web development, I work as a
+        graphic designer. I am very focused on my work. I always try to finish
+        each task properly. I chose font-end web development as my profession. I
+        am always interested and interested in learning about this subject. I am
+        constantly learning about this, and trying to stay updated with
+        technology.
       </p>
     </div>
   );

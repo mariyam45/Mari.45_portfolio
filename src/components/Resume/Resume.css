@@ -41,7 +41,7 @@
 }
 .icons::after {
   content: "";
-  height: 10rem;
+  height: 12rem;
   background-color: #999999;
   color: #999999;
   width: 1px;

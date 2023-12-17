@@ -10,14 +10,18 @@ import "./Profile.css";
 const Profile = () => {
   return (
     <div className="profile h-screen md:ms-5 px-5 py-10 md:py-4 2xl:pt-16   relative px-auto md:sticky top-0">
-      <div className="pro_top md:text-center   ">
+      <div
+        className="pro_top md:text-center  md:flex align-center 
+       justify-between"
+      >
         {" "}
-        <h2 className=" text-4xl mb-4">
+        <h2 className=" text-4xl ">
           <a href="#">
             {" "}
             Mari.<span>52</span>{" "}
           </a>
         </h2>
+        <span className="md:mt-3">Marian Suchi</span>
       </div>
 
       <img className="h-3/5 mx-auto " src={myimg} alt="" />
@@ -25,7 +29,7 @@ const Profile = () => {
         <p className="text-lg font-thin  md:text-start">Font-End Web Dev. /</p>
         <p className="text-lg font-thin md:text-end">Graphics Designer</p>
       </div>
-      <div className="social_icons text-center 2xl:mt-10">
+      <div className="social_icons text-center  2xl:mt-10">
         <a
           href="https://web.whatsapp.com/"
           target="_blank"

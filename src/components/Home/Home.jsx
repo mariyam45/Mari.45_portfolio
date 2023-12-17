@@ -19,7 +19,8 @@ const Home = () => {
         <p className="ms-2">INTRODUCE</p>
       </div>
       <h1>
-        Say Hi from <span>Marian</span>, Web Developer and Graphics Designer
+        Say Hi from <span>Marian</span>,Font-end Web Developer and Graphics
+        Designer
       </h1>
       <p className="w-4/6">
         I design and code beautifully simple things and i love what i do. Just

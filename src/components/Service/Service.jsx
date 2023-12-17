@@ -37,7 +37,10 @@ const Service = () => {
             <h4>Website Development</h4>
             <box-icon name="code-alt" color="#28e98c"></box-icon>
           </div>
-          <p>I build website go live with Framer, Webflow or WordPress</p>
+          <p>
+            I build website (font-end) using HTML, css, javascript, react, and
+            theme development by PHP, wordpress.
+          </p>
           <Link to="https://github.com/mariyam45" target="_blank">
             <small>Some Projects</small>
           </Link>
@@ -55,7 +58,7 @@ const Service = () => {
 
             {/* <box-icon type="logo" name="adobe" color="#28e98c"></box-icon> */}
           </div>
-          <p>I build website go live with Framer, Webflow or WordPress</p>
+          <p>I build beautiful design using Illustrator, Photoshop</p>
           <Link to="https://github.com/mariyam45" target="_blank">
             <small>Some Projects</small>
           </Link>
