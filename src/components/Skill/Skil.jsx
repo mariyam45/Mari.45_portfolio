@@ -1,7 +1,6 @@
 import { faPen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
-import EachSkil from "../EachSkill/EachSkil";
 import "./Skil.css";
 
 const Skil = () => {
@@ -35,37 +34,118 @@ const Skil = () => {
         </h1>
         <div className="skils_cont mt-10">
           <div className="skil_card grid md:grid-cols-4 grid-cols-2 gap-8">
-            {/* <div className="skil_div">
-              <img
-                src="../../../public/assets/HTML5_Badge.svg.png"
-                alt=""
-                className=""
-              />
+            <div
+              className="skil_div "
+              data-aos="fade-down"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
               <h4>HTML</h4>
             </div>
-            <div className="skil_div">
-              <img src="../../../public/assets/css.png" alt="" className="" />
+            <div
+              className="skil_div"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
               <h4>CSS3</h4>
             </div>
-            <div className="skil_div">
-              <img
-                src="../../../public/assets/JavaScript-logo.png"
-                alt=""
-                className=""
-              />
-              <h4>CSS3</h4>
+            <div
+              className="skil_div"
+              data-aos="fade-down"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
+              <h4>JavaScript</h4>
             </div>
-            <div className="skil_div">
-              <img
-                src="../../../public/assets/React-icon.svg.png"
-                alt=""
-                className="w-full"
-              />
-              <h4>CSS3</h4>
-            </div> */}
-            {skils.map((skil) => (
+            <div
+              className="skil_div"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
+              <h4>React</h4>
+            </div>
+            <div
+              className="skil_div"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
+              <h4>PHP</h4>
+            </div>
+            <div
+              className="skil_div "
+              data-aos="fade-left"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
+              <h4>WordPress(T.D)</h4>
+            </div>
+            <div
+              className="skil_div"
+              data-aos="fade-right"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
+              <h4>Tailwind</h4>
+            </div>
+            <div
+              className="skil_div"
+              data-aos="fade-left"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
+              <h4>DaysiUI</h4>
+            </div>
+            <div
+              className="skil_div"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
+              <h4>Bootstrap</h4>
+            </div>
+            <div
+              className="skil_div"
+              data-aos="fade-down"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
+              <h4>Firebase</h4>
+            </div>
+            <div
+              className="skil_div"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
+              <h4>Illuatrator</h4>
+            </div>
+            <div
+              className="skil_div"
+              data-aos="fade-down"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
+              <h4>Photoshop</h4>
+            </div>
+
+            {/* {skils.map((skil) => (
               <EachSkil key={skil.id} skil={skil}></EachSkil>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>

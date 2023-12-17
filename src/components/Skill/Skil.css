@@ -5,12 +5,12 @@
 
 /* .skil_card {
 } */
-/* .skil_div {
+.skil_div {
   border: 1px solid #999999;
-  padding: 2rem;
+  padding: 1.3rem 2.3rem;
   text-align: center;
-  border-radius: 3rem;
-} */
+  border-radius: 2rem;
+}
 .skil_div img {
   height: 7rem;
   width: 100%;
