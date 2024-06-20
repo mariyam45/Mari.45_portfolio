@@ -131,7 +131,7 @@ const Skil = () => {
               // data-aos-offset="100"
               data-aos-easing="linear"
             >
-              <h4>Illuatrator</h4>
+              <h4>Illustrator</h4>
             </div>
             <div
               className="skil_div"
