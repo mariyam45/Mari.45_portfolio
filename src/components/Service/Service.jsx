@@ -42,7 +42,7 @@ const Service = () => {
             theme development by PHP, wordpress.
           </p>
           <Link to="https://github.com/mariyam45" target="_blank">
-            <small>Some Projects</small>
+            <small>Some Projects -></small>
           </Link>
         </div>
         <div
@@ -59,8 +59,8 @@ const Service = () => {
             {/* <box-icon type="logo" name="adobe" color="#28e98c"></box-icon> */}
           </div>
           <p>I build beautiful design using Illustrator, Photoshop</p>
-          <Link to="https://github.com/mariyam45" target="_blank">
-            <small>Some Projects</small>
+          <Link to="https://www.behance.net/mariansuchi1" target="_blank">
+            <small>Some Projects -></small>
           </Link>
         </div>
       </div>
