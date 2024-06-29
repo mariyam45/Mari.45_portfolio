@@ -32,7 +32,7 @@ const Home = () => {
         data-tip="GET MY CV"
       >
         <a
-          href="https://drive.google.com/file/d/1dglQHxd6DHR3StaVy_jkKSwSZ3yUqDgd/view?usp=sharing"
+          href="https://drive.google.com/file/d/1GBGtQWJJioAMehxV5P1ylCo4bfe18AGt/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
