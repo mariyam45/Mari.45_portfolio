@@ -34,7 +34,7 @@ const SideNav = () => {
         </li>
       </ul> */}
 
-      <div className="navbar-end md:hidden fixed top-10   right-20  nav_sm text-end ">
+      <div className="navbar-end md:hidden fixed top-10   right-1  nav_sm text-end ">
         <div className="dropdown">
           <div tabIndex={0} role="button" className=" icon_btn  ">
             <svg
