@@ -36,7 +36,7 @@ const Resume = () => {
             8<sup>th</sup> March, 2024 - 28<sup>th</sup> June, 2024{" "}
           </p>
           <h3>Customer Service Representative</h3>
-          <h6 className="inst">Digicon Technology Ltd.</h6>
+          <h6 className="inst">Digicon Technologies PLC</h6>
         </div>
       </div>
       {/* ___________________> */}
