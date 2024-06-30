@@ -34,14 +34,14 @@ const SideNav = () => {
         </li>
       </ul> */}
 
-      <div className="navbar-end md:hidden fixed top-10   right-1 nav_sm text-end">
+      <div className="navbar-end md:hidden fixed top-10   right-20  nav_sm text-end ">
         <div className="dropdown">
           <div tabIndex={0} role="button" className=" icon_btn  ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              className="inline-block w-10 h-10 stroke-current"
+              className="inline-block w-10 h-10 stroke-current me-5"
             >
               <path
                 strokeLinecap="round"
@@ -81,6 +81,8 @@ const SideNav = () => {
           </ul>
         </div>
       </div>
+
+      {/*__________________________ big screen sidebar ___________________ */}
 
       <div className="main_nav text-end sticky top-0 md:block hidden">
         <ul className="menu menu-sm  mt-3 p-2">
