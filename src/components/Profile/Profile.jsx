@@ -30,31 +30,7 @@ const Profile = () => {
         <p className="text-lg font-thin md:text-end">Graphics Designer</p>
       </div>
       <div className="social_icons text-center  2xl:mt-10">
-        <a
-          href="https://web.whatsapp.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <box-icon type="logo" name="whatsapp" color="#999999"></box-icon>
-        </a>
-        {/* <a href="mailto:">
-          <box-icon name="gmail" type="logo" flip="horizontal"></box-icon>
-        </a> */}
-        <a
-          href="https://www.facebook.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <box-icon type="logo" name="facebook" color="#999999"></box-icon>
-        </a>
-        <a
-          href="https://www.instagram.com/marian_suchi45/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <box-icon type="logo" name="instagram" color="#999999"></box-icon>
-        </a>
-
+        {/* _______________  */}
         <a
           href="https://github.com/mariyam45"
           target="_blank"
@@ -63,6 +39,32 @@ const Profile = () => {
           {" "}
           <box-icon name="github" type="logo" color="#999999"></box-icon>
         </a>
+        {/* _______________________  */}
+        <a
+          href="https://www.behance.net/mariansuchi1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <box-icon type="logo" name="behance" color="#999999"></box-icon>
+        </a>
+        {/* ______________________  */}
+
+        <a
+          href="https://www.linkedin.com/in/marian-akter-suchi/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <box-icon type="logo" name="linkedin" color="#999999"></box-icon>
+        </a>
+        {/* ____________________  */}
+        <a
+          href="https://www.facebook.com/MASUCHI.MS"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <box-icon type="logo" name="facebook" color="#999999"></box-icon>
+        </a>
+        {/* _________________________  */}
       </div>
       <a href="mailto:mari.official4570@gmail.com" className="2xl:ms-3">
         {" "}

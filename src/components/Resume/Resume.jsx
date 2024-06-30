@@ -20,6 +20,26 @@ const Resume = () => {
       <h1>
         Education & <span>Experience</span>
       </h1>
+      {/* ___________________> */}
+      <div
+        className="edu1 "
+        data-aos="fade-right"
+        data-aos-duration="600"
+        // data-aos-offset="100"
+        data-aos-easing="linear"
+      >
+        <div className="icons">
+          <FontAwesomeIcon icon={faCircle} />
+        </div>
+        <div className="edu_dtls text-start">
+          <p>
+            8<sup>th</sup> March, 2024 - 28<sup>th</sup> June, 2024{" "}
+          </p>
+          <h3>Customer Service Representative</h3>
+          <h6 className="inst">Digicon Technology Ltd.</h6>
+        </div>
+      </div>
+      {/* ___________________> */}
       <div
         className="edu1 "
         data-aos="fade-right"
@@ -33,9 +53,10 @@ const Resume = () => {
         <div className="edu_dtls text-start">
           <p>2023</p>
           <h3>Intern As Web Design & Developer</h3>
-          <small>Engineer’s Computing & Computers Ltd. (ECC)</small>
+          <h6 className="inst">Engineer’s Computing & Computers Ltd. (ECC)</h6>
         </div>
       </div>
+      {/* ____________________________ */}
       <div
         className="edu1 "
         data-aos="fade-right"
@@ -52,11 +73,12 @@ const Resume = () => {
             {" "}
             Programming Hero <span className="text-sm">(6 month coures)</span>
           </h3>
-          <small>
+          <h6>
             I have done ‘Complete Web Development’ course from Programming Hero
-          </small>
+          </h6>
         </div>
       </div>
+      {/* ____________________________ */}
       <div
         className="edu1 "
         data-aos="fade-right"
@@ -73,13 +95,14 @@ const Resume = () => {
             Diploma Engineering on Computer Technology
           </h4>
           <h3>Dhaka Polytechnic Institute</h3>
-          <small>
+          <h6>
             I successfully graduated with a diploma in Computer Science
             Engineering from Dhaka Polytechnic Institute, the premier
             educational establishment in Bangladesh.
-          </small>
+          </h6>
         </div>
       </div>
+      {/* ____________________________ */}
       <div
         className="edu1 "
         data-aos="fade-right"
@@ -94,10 +117,10 @@ const Resume = () => {
           <p>2016-2019</p>
           <h4 className="text-white">Secondary School Certificate</h4>
           <h3>UCEP SSC Vocational , Mirpur ( UCEP Bangladesh)</h3>
-          <small>
+          <h6>
             I have given SSC from this institute on General Mechanical
             department.
-          </small>
+          </h6>
         </div>
       </div>
     </div>
