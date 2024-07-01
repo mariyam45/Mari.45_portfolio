@@ -68,3 +68,10 @@
 .edu1:hover .icons {
   color: #28e98c;
 }
+
+/* -------------  */
+@media only screen and (max-width: 600px) {
+  .icons::after {
+    height: 14rem;
+  }
+}

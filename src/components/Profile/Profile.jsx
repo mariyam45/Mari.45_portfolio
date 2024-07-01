@@ -26,7 +26,7 @@ const Profile = () => {
 
       <img className="h-3/5 mx-auto " src={myimg} alt="" />
       <div className=" text-center my-5  md:my-2 mx-5 pro_status 2xl:px-10">
-        <p className="text-lg font-thin  md:text-start">Font-End Web Dev. /</p>
+        <p className="text-lg font-thin  md:text-start">Front-End Web Dev. /</p>
         <p className="text-lg font-thin md:text-end">Graphics Designer</p>
       </div>
       <div className="social_icons text-center  2xl:mt-10">

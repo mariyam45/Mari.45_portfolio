@@ -38,7 +38,7 @@ const Service = () => {
             <box-icon name="code-alt" color="#28e98c"></box-icon>
           </div>
           <p>
-            I build website (font-end) using HTML, css, javascript, react, and
+            I build website (front-end) using HTML, css, javascript, react, and
             theme development by PHP, wordpress.
           </p>
           <Link to="https://github.com/mariyam45" target="_blank">

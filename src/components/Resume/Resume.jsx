@@ -71,7 +71,7 @@ const Resume = () => {
           <p>2022</p>
           <h3>
             {" "}
-            Programming Hero <span className="text-sm">(6 month coures)</span>
+            Programming Hero <span className="text-sm">(6 month course)</span>
           </h3>
           <h6>
             I have done ‘Complete Web Development’ course from Programming Hero
@@ -95,7 +95,7 @@ const Resume = () => {
             Diploma Engineering on Computer Technology
           </h4>
           <h3>Dhaka Polytechnic Institute</h3>
-          <h6>
+          <h6 className="mb-3 sm_txt text-xs  md:text-sm ">
             I successfully graduated with a diploma in Computer Science
             Engineering from Dhaka Polytechnic Institute, the premier
             educational establishment in Bangladesh.
@@ -117,8 +117,8 @@ const Resume = () => {
           <p>2016-2019</p>
           <h4 className="text-white">Secondary School Certificate</h4>
           <h3>UCEP SSC Vocational , Mirpur ( UCEP Bangladesh)</h3>
-          <h6>
-            I have given SSC from this institute on General Mechanical
+          <h6 className="sm_txt text-xs md:text-sm">
+            I have passed SSC from this institute on General Mechanical
             department.
           </h6>
         </div>
