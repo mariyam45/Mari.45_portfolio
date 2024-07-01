@@ -68,7 +68,7 @@ const SideNav = () => {
               <a href="#service">Service</a>
             </li>
             <li>
-              <a href="#skil">Skil</a>
+              <a href="#skil">Skills</a>
             </li>
             <li className="">
               <a href="#testimonial" className="hidden">
@@ -118,7 +118,7 @@ const SideNav = () => {
             </a>
           </li>
           <li>
-            <a href="#skil" className="tooltip tooltip-left" data-tip="Skils">
+            <a href="#skil" className="tooltip tooltip-left" data-tip="Skills">
               {" "}
               <FontAwesomeIcon icon={faMarker} />
             </a>

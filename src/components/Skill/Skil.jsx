@@ -22,7 +22,7 @@ const Skil = () => {
           data-aos-easing="linear"
         >
           <FontAwesomeIcon icon={faPen} />
-          <p className="ms-2">Skils</p>
+          <p className="ms-2">Skills</p>
         </div>
         <h1
           data-aos="fade-up"

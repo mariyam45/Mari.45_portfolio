@@ -20,7 +20,7 @@ const AboutMe = () => {
         <p className="ms-2">ABOUT</p>
       </div>
       <h1>
-        Somthing <span>About</span> me
+        Something <span>About</span> me
       </h1>
       <p className="w-5/6">
         Hello, I am Marian, a front-end web developer and graphic designer. I
