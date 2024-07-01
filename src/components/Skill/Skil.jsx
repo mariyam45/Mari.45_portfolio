@@ -12,7 +12,7 @@ const Skil = () => {
   }, []);
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <div className="skil" id="skil">
         <div
           className="heading_title flex  w-2/6  md:w-1/6 md:ps-7 ps-9 py-3"
