@@ -1,13 +1,13 @@
 .about {
-  margin-bottom: 10rem;
-  margin-top: 6rem;
+  /* margin-bottom: 10rem; */
+  /* margin-top: 6rem; */
 }
 .about h1 {
-  font-size: 3rem;
+  /* font-size: 1.8rem; */
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   margin-bottom: 1rem;
-  line-height: 4.5rem;
+  /* line-height: 2.7rem; */
 }
 .about span {
   color: #28e98c;
@@ -15,7 +15,7 @@
 .about p {
   font-family: "Raleway", sans-serif;
   color: #999999;
-  line-height: 2rem;
+  /* line-height: 1.8rem; */
 }
 .about .heading_title {
   font-size: 12px;

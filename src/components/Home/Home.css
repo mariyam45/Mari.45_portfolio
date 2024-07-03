@@ -1,18 +1,18 @@
 .home {
-  margin-bottom: 10rem;
-  margin-top: 3rem;
+  /* margin-bottom: 10rem; */
+  /* margin-top: 3rem; */
 }
 .home h1 {
   font-weight: 300;
-  font-size: 3.8rem;
+  /* font-size: 3.8rem; */
   font-family: "Poppins", sans-serif;
   margin-bottom: 1rem;
-  line-height: 4.5rem;
+  /* line-height: 4.5rem; */
 }
 .home p {
   font-family: "Raleway", sans-serif;
   color: #999999;
-  line-height: 2rem;
+  /* line-height: 2rem; */
 }
 .heading_title {
   font-size: 12px;

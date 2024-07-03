@@ -1,5 +1,5 @@
 .resume {
-  margin-bottom: 10rem;
+  /* margin-bottom: 10rem; */
 }
 .resume .heading_title {
   font-size: 12px;
@@ -15,11 +15,11 @@
   align-items: center;
 }
 .resume h1 {
-  font-size: 3rem;
+  /* font-size: 3rem; */
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  margin-bottom: 1.8rem;
-  line-height: 4.5rem;
+  margin-bottom: 2rem;
+  /* line-height: 4.5rem; */
 }
 .edu1 {
   color: #999999;
@@ -52,7 +52,7 @@
   font-size: 18px;
 }
 .edu_dtls h3 {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   color: azure;
   /* font-weight: 200; */
 }
@@ -72,6 +72,6 @@
 /* -------------  */
 @media only screen and (max-width: 600px) {
   .icons::after {
-    height: 14rem;
+    height: 12rem;
   }
 }

@@ -8,17 +8,17 @@ import "./Home.css";
 const Home = () => {
   return (
     <div
-      className="home md:mb-14 mb-6 "
+      className="home md:mb-30 mb-10 mt-12 md:mt-4"
       id="home"
       data-aos="fade-down"
       // data-aos-easing="linear"
       data-aos-duration="700"
     >
-      <div className="heading_title flex w-2/6  md:w-1/6">
+      <div className="heading_title flex w-2/6   md:w-1/6">
         <FontAwesomeIcon icon={faHome} />
         <p className="ms-2">INTRODUCE</p>
       </div>
-      <h1>
+      <h1 className="text-4xl md:text-[3.8rem] md:leading-[4.8rem] leading-[2.9rem]">
         Say Hi from <span>Marian</span>,
         <br /> Front-end Web Developer and Graphics Designer
       </h1>

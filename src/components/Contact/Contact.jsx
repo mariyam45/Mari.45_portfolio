@@ -23,7 +23,7 @@ const Contact = () => {
         <FontAwesomeIcon icon={faEnvelope} />
         <p className="ms-2">Contact</p>
       </div>
-      <h1>
+      <h1 className="text-4xl md:text-5xl">
         Let's Work <span>Together!</span>
       </h1>
       <h5

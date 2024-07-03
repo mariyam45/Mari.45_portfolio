@@ -8,7 +8,7 @@ import "./AboutMe.css";
 const AboutMe = () => {
   return (
     <div
-      className="about "
+      className="about mb-24 md:mb-30  md:mt-14 mt-0"
       data-aos="fade-up"
       data-aos-duration="600"
       // data-aos-offset="100"
@@ -19,10 +19,10 @@ const AboutMe = () => {
         <FontAwesomeIcon icon={faUser} />
         <p className="ms-2">ABOUT</p>
       </div>
-      <h1>
+      <h1 className="text-4xl md:text-5xl ">
         Something <span>About</span> me
       </h1>
-      <p className="w-5/6">
+      <p className="w-5/6 md:leading-[1.9rem] leading-[1.6rem]">
         Hello, I am Marian, a front-end web developer and graphic designer. I
         have been learning and practicing web development for a long time with
         hard work and dedication. Along with web development, I work as a

@@ -6,7 +6,10 @@ import { Link } from "react-router-dom";
 import "./Service.css";
 const Service = () => {
   return (
-    <div className="service mx-auto ms-0 overflow-hidden" id="service">
+    <div
+      className="service mx-auto ms-0 overflow-hidden mb-24 md:mb-36 "
+      id="service"
+    >
       <div
         className="heading_title flex  w-2/6  md:w-1/6 md:ps-6 ps-8 py-3 "
         data-aos="fade-right"
@@ -18,6 +21,7 @@ const Service = () => {
         <p className="ms-2">Services</p>
       </div>
       <h1
+        className="text-4xl md:text-5xl"
         data-aos="fade-right"
         data-aos-duration="600"
         // data-aos-offset="100"

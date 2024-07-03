@@ -12,7 +12,7 @@ const Skil = () => {
   }, []);
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden mb-24 md:mb-40">
       <div className="skil" id="skil">
         <div
           className="heading_title flex  w-2/6  md:w-1/6 md:ps-7 ps-9 py-3"
@@ -25,9 +25,10 @@ const Skil = () => {
           <p className="ms-2">Skills</p>
         </div>
         <h1
+          className="text-4xl md:text-5xl"
           data-aos="fade-up"
           data-aos-duration="600"
-          // data-aos-offset="100"
+          data-aos-offset="100"
           data-aos-easing="linear"
         >
           My <span>Advantages</span>

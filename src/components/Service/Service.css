@@ -1,5 +1,5 @@
 .service {
-  margin-bottom: 6rem;
+  /* margin-bottom: 6rem; */
 }
 .ser_card {
   border: 1px solid #565656;
@@ -26,11 +26,11 @@
   height: 40px;
 }
 .service h1 {
-  font-size: 3rem;
+  /* font-size: 3rem; */
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   margin-bottom: 1rem;
-  line-height: 4.5rem;
+  /* line-height: 4.5rem; */
 }
 /* .ser_card box-icon:hover {
  

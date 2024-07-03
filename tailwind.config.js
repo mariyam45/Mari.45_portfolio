@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      // lineHeight: {
+      //   "extra-loose": "4.5",
+      //   12: "4rem",
+      // },
+    },
   },
   daisyui: {
     // themes: ["cupcake", "dark", "cmyk"],
