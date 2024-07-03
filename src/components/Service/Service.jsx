@@ -27,7 +27,7 @@ const Service = () => {
         // data-aos-offset="100"
         data-aos-easing="linear"
       >
-        My <span>Specializations</span>
+        My <span>Services</span>
       </h1>
       <div className="service_cont mt-10">
         <div

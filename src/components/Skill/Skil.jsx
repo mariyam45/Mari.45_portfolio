@@ -31,7 +31,7 @@ const Skil = () => {
           data-aos-offset="100"
           data-aos-easing="linear"
         >
-          My <span>Advantages</span>
+          My <span>Skills</span>
         </h1>
         <div className="skils_cont mt-10">
           <div className="skil_card grid md:grid-cols-4 grid-cols-2 gap-8">
