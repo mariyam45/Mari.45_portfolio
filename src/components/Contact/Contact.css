@@ -1,0 +1,77 @@
+.contact h1 {
+  /* font-size: 3rem; */
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  /* line-height: 4.5rem; */
+}
+.contact h5 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: #c7c7c7;
+  /* letter-spacing: 0.5px; */
+  font-weight: 200;
+}
+.inputs {
+  margin-bottom: 1.2rem;
+}
+.inputs p {
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+}
+.inputs p span {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+.inputs input {
+  background: transparent;
+  /* margin-top: 1rem; */
+  border: none;
+  font-family: "Raleway", sans-serif;
+  padding-left: 0;
+  color: #e4e4e4;
+}
+textarea {
+  background: transparent !important;
+  padding-left: 0 !important;
+}
+input::placeholder {
+  font-size: 0.9rem;
+}
+.msg_btn {
+  bottom: 2%;
+  border-radius: 30px !important;
+  background: #28e98c !important;
+  color: black !important;
+  /* background: none !important; */
+  margin-left: 0.3rem;
+
+  display: inline-flex;
+  align-items: center;
+
+  justify-content: center;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+}
+.msg_btn:hover {
+  border: 2px solid #28e98c !important;
+  color: #28e98c !important;
+  background: none !important;
+}
+.select {
+  background: transparent !important;
+  padding-left: 0 !important;
+  color: #c7c7c7;
+  font-size: 1rem !important;
+}
+.select option {
+  background: #1f1f1f !important;
+  padding-left: 0 !important;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 1rem !important;
+  color: #c2c2c2;
+}

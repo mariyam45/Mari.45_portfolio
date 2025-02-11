@@ -1,0 +1,42 @@
+.sideBar {
+  font-family: "Raleway", sans-serif;
+  padding: 5rem 0;
+  /* color: #28e98c; */
+}
+.sideBar svg {
+  border: 1px solid #565656;
+  border-radius: 50%;
+  padding: 5px;
+  transition: ease-in-out 0.3s;
+}
+.sideBar svg:hover {
+  color: #28e98c;
+}
+.sideBar {
+  color: #999999 !important;
+}
+.sideBar li {
+  margin-bottom: 20px;
+}
+.sideBar li svg {
+  padding: 6px;
+  width: 16px;
+  height: 16px;
+}
+.sideBar li:hover {
+  color: #28e98c;
+}
+.nav_sm svg {
+  background: none !important;
+}
+.menu_cont {
+  background: #123826a2 !important;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  /* width: 100%; */
+}
+
+/* .sideBar li:active {
+  color: #28e98c;
+} */

@@ -1,0 +1,24 @@
+.skil {
+  /* margin-bottom: 10rem;
+  margin-top: 10rem; */
+}
+
+/* .skil_card {
+} */
+.skil_div {
+  border: 1px solid #999999;
+  padding: 1.3rem 2.3rem;
+  text-align: center;
+  border-radius: 2rem;
+}
+.skil_div img {
+  height: 7rem;
+  width: 100%;
+}
+.skil h1 {
+  /* font-size: 3rem; */
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  /* line-height: 4.5rem; */
+}

@@ -1,0 +1,12 @@
+.skil_div {
+  border: 1px solid #565656;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  font-family: "Raleway", sans-serif;
+  transition: ease-in-out 0.3s;
+}
+
+.skil_div:hover {
+  border-color: #28e98c;
+}

@@ -1,0 +1,47 @@
+.home {
+  /* margin-bottom: 10rem; */
+  /* margin-top: 3rem; */
+}
+.home h1 {
+  font-weight: 300;
+  /* font-size: 3.8rem; */
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+  /* line-height: 4.5rem; */
+}
+.home p {
+  font-family: "Raleway", sans-serif;
+  color: #999999;
+  /* line-height: 2rem; */
+}
+.heading_title {
+  font-size: 12px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 0;
+  border: 1px solid #565656;
+  padding: 5px 14px;
+  border-radius: 30px;
+  margin-bottom: 53px;
+  display: inline-flex;
+  align-items: center;
+}
+.download_cv button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 7px;
+  border: 1px solid #28e98c !important;
+}
+.download_cv box-icon {
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.download_cv button:hover {
+  background: #28e98c1c;
+}

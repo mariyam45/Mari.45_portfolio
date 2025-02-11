@@ -1,0 +1,37 @@
+.service {
+  /* margin-bottom: 6rem; */
+}
+.ser_card {
+  border: 1px solid #565656;
+  padding: 2.4rem;
+  border-radius: 2.4rem;
+  font-family: "Raleway", sans-serif;
+  transition: ease-in-out 0.4s;
+}
+.ser_card:hover {
+  border-color: #28e98c;
+}
+.ser_card h4 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+.ser_card p {
+  color: #999999;
+  margin-bottom: 3rem;
+}
+.ser_card box-icon {
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+.service h1 {
+  /* font-size: 3rem; */
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  /* line-height: 4.5rem; */
+}
+/* .ser_card box-icon:hover {
+ 
+} */

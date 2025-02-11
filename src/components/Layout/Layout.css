@@ -1,0 +1,12 @@
+.screen {
+  display: grid;
+  gap: 10px;
+}
+/* Profile {
+  position: sticky;
+  top: 0;
+}
+SideNav {
+  position: sticky;
+  top: 0;
+} */

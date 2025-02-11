@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "HTML",
+    "image": "./assets/HTML5_Badge.svg.png"
+  },
+  { "id": 2, "name": "CSS", "image": "./assets/css.png" },
+  { "id": 3, "name": "JavaScript", "image": "./assets/JavaScript-logo.png" },
+  { "id": 4, "name": "React", "image": "./assets/React-icon.svg.png" },
+  { "id": 11, "name": "PHP", "image": "./assets/React-icon.svg.png" },
+  {
+    "id": 12,
+    "name": "WordPress (T.D)",
+    "image": "./assets/React-icon.svg.png"
+  },
+  { "id": 5, "name": "Tailwind", "image": "./assets/Tailwind-CSS1-900x0.png " },
+  { "id": 10, "name": "DaysiUI", "image": "./assets/dUi.png " },
+  {
+    "id": 6,
+    "name": "Bootstrap",
+    "image": "./assets/bootstrap-logo-shadow.png "
+  },
+  { "id": 7, "name": "Firebase", "image": "./assets/logo-standard.png" },
+  {
+    "id": 8,
+    "name": "Illustrator",
+    "image": "./assets/illustrator-Logo-2015.png"
+  },
+  { "id": 9, "name": "Photoshop", "image": "./assets/Photoshop_CC_icon.png" }
+]
