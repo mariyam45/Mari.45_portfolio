@@ -60,14 +60,24 @@
   color: #28e98c;
   transition: ease-in 0.3s;
 }
+
+.edu1 h6{
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
 .edu1:hover h6 {
   color: #b9ddbe;
   /* color: #d7ffd4; */
   transition: ease-in 0.3s;
+  /* font-size: 1.4rem;
+  line-height: 1.7rem; */
 }
 .edu1:hover .icons {
   color: #28e98c;
 }
+
+
 
 /* -------------  */
 @media only screen and (max-width: 600px) {

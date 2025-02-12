@@ -12,7 +12,8 @@
 .home p {
   font-family: "Raleway", sans-serif;
   color: #999999;
-  /* line-height: 2rem; */
+  font-size: 1.4rem;
+  line-height: 1.7rem;
 }
 .heading_title {
   font-size: 12px;

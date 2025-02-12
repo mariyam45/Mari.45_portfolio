@@ -45,7 +45,7 @@ const Service = () => {
             {/* <box-icon type="logo" name="adobe" color="#28e98c"></box-icon> */}
           </div>
           <p>I build beautiful design using Illustrator, Photoshop</p>
-          <Link to="https://www.behance.net/mariansuchi1" target="_blank">
+          <Link to="https://www.behance.net/mariofficial/" target="_blank">
             <small>Some Projects -></small>
           </Link>
         </div>

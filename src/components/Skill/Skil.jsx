@@ -48,16 +48,27 @@ const Skil = () => {
             </div>
             <div
               className="skil_div"
-              data-aos="fade-down"
+              data-aos="fade-up"
               data-aos-duration="600"
               // data-aos-offset="100"
               data-aos-easing="linear"
             >
               <h4>Illustrator</h4>
             </div>
+
+            <div
+              className="skil_div"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
+              <h4>Figma</h4>
+            </div>
+
             <div
               className="skil_div "
-              data-aos="fade-down"
+              data-aos="fade-up"
               data-aos-duration="600"
               // data-aos-offset="100"
               data-aos-easing="linear"
@@ -75,7 +86,7 @@ const Skil = () => {
             </div>
             <div
               className="skil_div"
-              data-aos="fade-down"
+              data-aos="fade-up"
               data-aos-duration="600"
               // data-aos-offset="100"
               data-aos-easing="linear"
@@ -93,7 +104,7 @@ const Skil = () => {
             </div>
             <div
               className="skil_div"
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-duration="600"
               // data-aos-offset="100"
               data-aos-easing="linear"
@@ -102,7 +113,7 @@ const Skil = () => {
             </div>
             <div
               className="skil_div "
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-duration="600"
               // data-aos-offset="100"
               data-aos-easing="linear"
@@ -111,7 +122,7 @@ const Skil = () => {
             </div>
             <div
               className="skil_div"
-              data-aos="fade-right"
+              data-aos="fade-up"
               data-aos-duration="600"
               // data-aos-offset="100"
               data-aos-easing="linear"
@@ -120,7 +131,7 @@ const Skil = () => {
             </div>
             <div
               className="skil_div"
-              data-aos="fade-left"
+              data-aos="fade-up"
               data-aos-duration="600"
               // data-aos-offset="100"
               data-aos-easing="linear"
@@ -136,15 +147,15 @@ const Skil = () => {
             >
               <h4>Bootstrap</h4>
             </div>
-            <div
+            {/* <div
               className="skil_div"
-              data-aos="fade-down"
+              data-aos="fade-up"
               data-aos-duration="600"
               // data-aos-offset="100"
               data-aos-easing="linear"
             >
               <h4>Figma</h4>
-            </div>
+            </div> */}
            
 
             {/* {skils.map((skil) => (

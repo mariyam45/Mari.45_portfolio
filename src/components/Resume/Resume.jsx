@@ -37,7 +37,7 @@ const Resume = () => {
             1<sup>st</sup> August, 2024 - Continue {" "}
           </p>
           <h3 className="text-2xl md:text-4xl my-2">
-            Jr. Visual Designer
+           Visual Designer
           </h3>
           <h6 className="inst">bdCalling IT Ltd. (Backbencher Studio)</h6>
         </div>
@@ -125,9 +125,7 @@ const Resume = () => {
             Dhaka Polytechnic Institute
           </h3>
           <h6 className="mb-3 sm_txt text-xs  md:text-sm ">
-            I successfully graduated with a diploma in Computer Science
-            Engineering from Dhaka Polytechnic Institute, the premier
-            educational establishment in Bangladesh.
+          I have completed my diploma from Dhaka Polytechnic Institute with success.
           </h6>
         </div>
       </div>
