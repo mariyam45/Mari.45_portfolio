@@ -15,6 +15,11 @@
   font-size: 1.4rem;
   line-height: 1.7rem;
 }
+.heading_title p{
+  font-size: .9rem;
+  color: white;
+  
+}
 .heading_title {
   font-size: 12px;
   color: #ffffff;
