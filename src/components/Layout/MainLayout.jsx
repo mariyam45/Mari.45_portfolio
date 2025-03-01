@@ -5,14 +5,14 @@ import Profile from "../Profile/Profile";
 import SideNav from "../SideNav/SideNav";
 import "./Layout.css";
 
-const Layout = () => {
+const MainLayout = () => {
   return (
     <div className="screen grid-cols-1 md:grid-cols-[3fr_8fr_1fr]">
-      <Profile id="profile"></Profile>
-      <Outlet></Outlet>
-      <SideNav></SideNav>
+      <Profile id="profile" />
+      <Outlet />
+      <SideNav />
     </div>
   );
 };
 
-export default Layout;
+export default MainLayout;

@@ -8,9 +8,9 @@
   font-family: "Raleway", sans-serif;
   transition: ease-in-out 0.4s;
 }
-.ser_card:hover {
+/* .ser_card:hover {
   border-color: #28e98c;
-}
+} */
 .ser_card h4 {
   font-size: 1.5rem;
   font-weight: 200;

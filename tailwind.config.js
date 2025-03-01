@@ -26,6 +26,9 @@ export default {
       //   "extra-loose": "4.5",
       //   12: "4rem",
       // },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
   daisyui: {

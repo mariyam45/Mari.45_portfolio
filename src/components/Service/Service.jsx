@@ -31,8 +31,8 @@ const Service = () => {
       </h1>
       <div className="service_cont mt-10">
 
-      <div
-          className="ser_card mb-6"
+        <div
+          className="ser_card mb-6 border hover:border-[#28e98c]"
           data-aos="fade-right"
           data-aos-duration="600"
           // data-aos-offset="100"
@@ -45,8 +45,8 @@ const Service = () => {
             {/* <box-icon type="logo" name="adobe" color="#28e98c"></box-icon> */}
           </div>
           <p>I build beautiful design using Illustrator, Photoshop</p>
-          <Link to="https://www.behance.net/mariofficial/" target="_blank">
-            <small>Some Projects -></small>
+          <Link to="/projects" target="_blank">
+            <small >Some Projects →</small>
           </Link>
         </div>
 
@@ -60,19 +60,19 @@ const Service = () => {
           data-aos-easing="linear"
         >
           <div className="flex justify-between align-middle">
-            <h4>Website Development</h4>
-            <box-icon name="code-alt" color="#28e98c"></box-icon>
+            <h4 className="text-gray-400">Website Development</h4>
+            <box-icon name="code-alt" color="#9d9ea7"></box-icon>
           </div>
           <p>
             I build website (front-end) using HTML, css, javascript, react, and
             theme development by PHP, wordpress.
           </p>
           <Link to="https://github.com/mariyam45" target="_blank">
-            <small>Some Projects -></small>
+            <small className="text-gray-400">Some Projects →</small>
           </Link>
         </div>
         {/* ---------------------- */}
-       
+
       </div>
     </div>
   );
