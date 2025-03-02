@@ -50,7 +50,7 @@ const Projects = () => {
         const fetchProjects = async () => {
             try {
                 setIsLoading(true);
-                const response = await fetch("/public/data/graphicDesignProjects.json");
+                const response = await fetch("/graphicDesignProjects.json");
 
                 if (!response.ok) {
                     throw new Error(`Failed to fetch: ${response.status}`);
