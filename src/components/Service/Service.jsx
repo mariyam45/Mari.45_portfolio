@@ -44,7 +44,7 @@ const Service = () => {
 
             {/* <box-icon type="logo" name="adobe" color="#28e98c"></box-icon> */}
           </div>
-          <p>I build beautiful design using Illustrator, Photoshop</p>
+          <p>Here are some recent official client projects, where each design satisfied the client. Additionally, there are also some inspirational designs</p>
           <Link to="/projects" target="_blank">
             <small >Some Projects →</small>
           </Link>
