@@ -25,11 +25,11 @@ const Projects = () => {
         },
     };
 
-    // Responsive image size classes with better aspect ratio maintenance
+
     const imageSizeClasses = {
-        portrait: "aspect-[0.8] w-full max-w-xs mx-auto", // 4:5 aspect ratio
-        landscape: "aspect-[1.85] w-full", // 1.85:1 aspect ratio
-        square: "aspect-square w-full max-w-sm mx-auto", // 1:1 aspect ratio
+        portrait: "aspect-[0.8] w-full max-w-xs mx-auto",
+        landscape: "aspect-[1.85] w-full",
+        square: "aspect-square w-full max-w-sm mx-auto",
     };
 
     // Get grid column classes based on imageSize
@@ -115,8 +115,10 @@ const Projects = () => {
         );
     };
 
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
     // Render project cards
     const renderProjects = () => {
+
         if (isLoading) {
             return <div className="text-center py-8">Loading projects...</div>;
         }
@@ -143,11 +145,18 @@ const Projects = () => {
                         <div
                             className={`border border-[#28E98C] rounded-xl overflow-hidden ${imageSizeClasses[imageSize]}`}
                         >
+                            {/* Skeleton Loader */}
+                            {!isImageLoaded && (
+                                <div className="w-full h-full bg-gray-300 animate-pulse"></div>
+                            )}
+
+                            {/* Image */}
                             <img
-                                className="w-full h-full object-cover"
+                                className={`w-full h-full object-cover ${isImageLoaded ? "block" : "hidden"}`}
                                 src={project.img}
                                 alt={project.name}
                                 loading="lazy"
+                                onLoad={() => setIsImageLoaded(true)} // Set image as loaded
                             />
                         </div>
                     </motion.div>
