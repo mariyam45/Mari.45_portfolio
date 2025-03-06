@@ -41,7 +41,7 @@ const Profile = () => {
         </a>
         {/* _______________________  */}
         <a
-          href="https://www.behance.net/mariansuchi1"
+          href="https://www.behance.net/mariofficial"
           target="_blank"
           rel="noopener noreferrer"
         >
