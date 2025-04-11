@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import StaggerAnimation from "./components/StaggerAnimation";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -7,11 +7,15 @@ import { ArrowLeft } from "lucide-react";
 const Projects = () => {
     // State management
     const [projects, setProjects] = useState([]);
-    const [imageSize, setImageSize] = useState("square");
-    const [filteredProjects, setFilteredProjects] = useState([]);
+    const [activeSection, setActiveSection] = useState("portrait");
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [key, setKey] = useState(0);
+    
+    // References for section containers
+    const portraitRef = useRef(null);
+    const squareRef = useRef(null);
+    const landscapeRef = useRef(null);
+    const containerRef = useRef(null);
 
     // Animation variants
     const animations = {
@@ -25,7 +29,6 @@ const Projects = () => {
         },
     };
 
-
     const imageSizeClasses = {
         portrait: "aspect-[0.8] w-full max-w-xs mx-auto",
         landscape: "aspect-[1.85] w-full",
@@ -33,7 +36,7 @@ const Projects = () => {
     };
 
     // Get grid column classes based on imageSize
-    const getGridClasses = () => {
+    const getGridClasses = (imageSize) => {
         switch (imageSize) {
             case "landscape":
                 return "grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2";
@@ -59,11 +62,6 @@ const Projects = () => {
                 const data = await response.json();
                 console.log("Fetched data:", data);
                 setProjects(data);
-
-                const filtered = data.find((item) => item.imageSize === imageSize)?.data || [];
-                console.log("Filtered projects (initial):", filtered);
-                setFilteredProjects(filtered);
-
                 setIsLoading(false);
             } catch (error) {
                 console.error("Error fetching projects:", error);
@@ -75,21 +73,80 @@ const Projects = () => {
         fetchProjects();
     }, []);
 
-    // Update filtered projects when imageSize changes
+    // Set up scroll event listener for more reliable section detection
     useEffect(() => {
-        if (projects.length > 0) {
-            console.log("Updating filtered projects for imageSize:", imageSize);
-            const filtered = projects.find((item) => item.imageSize === imageSize)?.data || [];
-            console.log("Filtered projects:", filtered);
-            setFilteredProjects(filtered);
-            setKey(prevKey => prevKey + 1);
-        }
-    }, [imageSize, projects]);
+        if (!portraitRef.current || !squareRef.current || !landscapeRef.current) return;
 
-    // Handle image size change
-    const handleImageSizeChange = (size) => {
-        console.log("Changing image size to:", size);
-        setImageSize(size);
+        const handleScroll = () => {
+            const portraitRect = portraitRef.current.getBoundingClientRect();
+            const squareRect = squareRef.current.getBoundingClientRect();
+            const landscapeRect = landscapeRef.current.getBoundingClientRect();
+            
+            // Get the middle of the viewport
+            const viewportMiddle = window.innerHeight / 2;
+            
+            // Calculate distance from viewport middle to each section's top
+            const portraitDistance = Math.abs(portraitRect.top - viewportMiddle);
+            const squareDistance = Math.abs(squareRect.top - viewportMiddle);
+            const landscapeDistance = Math.abs(landscapeRect.top - viewportMiddle);
+            
+            // Find the section closest to the middle of the viewport
+            const minDistance = Math.min(portraitDistance, squareDistance, landscapeDistance);
+            
+            if (minDistance === portraitDistance) {
+                setActiveSection("portrait");
+            } else if (minDistance === squareDistance) {
+                setActiveSection("square");
+            } else if (minDistance === landscapeDistance) {
+                setActiveSection("landscape");
+            }
+
+            // Alternative approach: check if sections are in viewport
+            const isInViewport = (element) => {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight / 2) &&
+                    rect.bottom >= (window.innerHeight / 3)
+                );
+            };
+
+            // Check each section and set active accordingly
+            if (isInViewport(squareRef.current)) {
+                setActiveSection("square");
+            } else if (isInViewport(portraitRef.current)) {
+                setActiveSection("portrait");
+            } else if (isInViewport(landscapeRef.current)) {
+                setActiveSection("landscape");
+            }
+        };
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        // Initial check
+        handleScroll();
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [isLoading]);
+
+    // Handle button click to scroll to section
+    const scrollToSection = (section) => {
+        const sectionRefs = {
+            portrait: portraitRef,
+            square: squareRef,
+            landscape: landscapeRef
+        };
+        
+        const sectionRef = sectionRefs[section];
+        
+        if (sectionRef.current) {
+            sectionRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            setActiveSection(section); // Immediately update active section on click
+        }
     };
 
     // Render size selection buttons
@@ -105,20 +162,18 @@ const Projects = () => {
                 {buttons.map((button) => (
                     <button
                         key={button.size}
-                        onClick={() => handleImageSizeChange(button.size)}
-                        className={`${button.className} rounded-sm ${imageSize === button.size ? "bg-[#28E98C]" : "bg-[#94ACA1]"
-                            }`}
-                        aria-label={`Set ${button.size} image layout`}
+                        onClick={() => scrollToSection(button.size)}
+                        className={`${button.className} rounded-sm ${activeSection === button.size ? "bg-[#28E98C]" : "bg-[#94ACA1]"
+                            } transition-colors duration-300`}
+                        aria-label={`Scroll to ${button.size} images`}
                     />
                 ))}
             </div>
         );
     };
 
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
-    // Render project cards
-    const renderProjects = () => {
-
+    // Render project section
+    const renderProjectSection = (imageSize) => {
         if (isLoading) {
             return <div className="text-center py-8">Loading projects...</div>;
         }
@@ -127,16 +182,18 @@ const Projects = () => {
             return <div className="text-center text-red-500 py-8">Error: {error}</div>;
         }
 
-        if (filteredProjects.length === 0) {
-            return <div className="text-center py-8">No projects found for this layout.</div>;
+        const sectionProjects = projects.find(item => item.imageSize === imageSize)?.data || [];
+
+        if (sectionProjects.length === 0) {
+            return <div className="text-center py-8">No projects found for {imageSize} layout.</div>;
         }
 
         return (
             <StaggerAnimation
-                key={key}
-                classes={`grid ${getGridClasses()} gap-4 md:gap-5 lg:gap-6`}
+                key={imageSize}
+                classes={`grid ${getGridClasses(imageSize)} gap-4 md:gap-5 lg:gap-6`}
             >
-                {filteredProjects.map((project) => (
+                {sectionProjects.map((project) => (
                     <motion.div
                         key={project.id}
                         variants={animations.card}
@@ -145,18 +202,11 @@ const Projects = () => {
                         <div
                             className={`border border-[#28E98C] rounded-xl overflow-hidden ${imageSizeClasses[imageSize]}`}
                         >
-                            {/* Skeleton Loader */}
-                            {!isImageLoaded && (
-                                <div className="w-full h-full bg-gray-300 animate-pulse"></div>
-                            )}
-
-                            {/* Image */}
                             <img
-                                className={`w-full h-full object-cover ${isImageLoaded ? "block" : "hidden"}`}
+                                className="w-full h-full object-cover"
                                 src={project.img}
                                 alt={project.name}
                                 loading="lazy"
-                                onLoad={() => setIsImageLoaded(true)} // Set image as loaded
                             />
                         </div>
                     </motion.div>
@@ -166,8 +216,8 @@ const Projects = () => {
     };
 
     return (
-        <div className="flex flex-col md:flex-row gap-x-20 space-y-4">
-            {/* Projects display */}
+        <div className="flex flex-col md:flex-row gap-x-20 space-y-4" ref={containerRef}>
+            {/* Back button and mobile buttons - keeping original layout */}
             <div className="flex justify-between">
                 <div>
                     <Link
@@ -182,14 +232,48 @@ const Projects = () => {
                     {renderSizeButtons()}
                 </div>
             </div>
+
+            {/* Main content with projects */}
             <motion.div
                 initial={animations.container.initial}
                 animate={animations.container.animate}
                 className="w-full"
             >
-                {renderProjects()}
+                {/* Portrait Section */}
+                <section 
+                    ref={portraitRef} 
+                    data-section="portrait"
+                    className="mb-20 pt-4"
+                    id="portrait-section"
+                >
+                    <h2 className="text-xl font-medium text-[#28E98C] mb-6">Portrait Projects</h2>
+                    {renderProjectSection("portrait")}
+                </section>
+
+                {/* Square Section */}
+                <section 
+                    ref={squareRef} 
+                    data-section="square"
+                    className="mb-20 pt-4"
+                    id="square-section"
+                >
+                    <h2 className="text-xl font-medium text-[#28E98C] mb-6">Square Projects</h2>
+                    {renderProjectSection("square")}
+                </section>
+
+                {/* Landscape Section */}
+                <section 
+                    ref={landscapeRef} 
+                    data-section="landscape"
+                    className="mb-20 pt-4"
+                    id="landscape-section"
+                >
+                    <h2 className="text-xl font-medium text-[#28E98C] mb-6">Landscape Projects</h2>
+                    {renderProjectSection("landscape")}
+                </section>
             </motion.div>
-            {/* Size selection buttons */}
+
+            {/* Size selection buttons - keeping original position */}
             <div className="sticky top-20 self-start hidden md:block">
                 {renderSizeButtons()}
             </div>
