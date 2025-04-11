@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 const ProjectsLayout = () => {
     return (
-        <section className="max-w-[1180px] mx-auto min-h-screen h-full bg-[#1f1f1f] pt-10 pb-20 px-4 md:px-0">
+        <section className="max-w-[1280px] mx-auto min-h-screen h-full bg-[#1f1f1f] pt-10 pb-20 px-4 md:px-0">
             {/* Header */}
             <div className="flex gap-x-6 items-center w-full py-4 mb-11">
                 <div className="border-t border-[#D9D9D9] flex-grow" />
