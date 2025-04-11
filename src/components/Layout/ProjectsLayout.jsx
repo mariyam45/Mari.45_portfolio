@@ -9,7 +9,6 @@ const ProjectsLayout = () => {
                 <span className="text-white text-xl leading-[30px] tracking-[3%] font-poppins">Client’s Work and Inspiration Designs</span>
                 <div className="border-t border-[#D9D9D9] flex-grow" />
             </div>
-
             <Outlet />
         </section>
     );

@@ -10,7 +10,7 @@ const Projects = () => {
     const [activeSection, setActiveSection] = useState("portrait");
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-    
+
     // References for section containers
     const portraitRef = useRef(null);
     const squareRef = useRef(null);
@@ -81,18 +81,18 @@ const Projects = () => {
             const portraitRect = portraitRef.current.getBoundingClientRect();
             const squareRect = squareRef.current.getBoundingClientRect();
             const landscapeRect = landscapeRef.current.getBoundingClientRect();
-            
+
             // Get the middle of the viewport
             const viewportMiddle = window.innerHeight / 2;
-            
+
             // Calculate distance from viewport middle to each section's top
             const portraitDistance = Math.abs(portraitRect.top - viewportMiddle);
             const squareDistance = Math.abs(squareRect.top - viewportMiddle);
             const landscapeDistance = Math.abs(landscapeRect.top - viewportMiddle);
-            
+
             // Find the section closest to the middle of the viewport
             const minDistance = Math.min(portraitDistance, squareDistance, landscapeDistance);
-            
+
             if (minDistance === portraitDistance) {
                 setActiveSection("portrait");
             } else if (minDistance === squareDistance) {
@@ -137,9 +137,9 @@ const Projects = () => {
             square: squareRef,
             landscape: landscapeRef
         };
-        
+
         const sectionRef = sectionRefs[section];
-        
+
         if (sectionRef.current) {
             sectionRef.current.scrollIntoView({
                 behavior: 'smooth',
@@ -216,9 +216,9 @@ const Projects = () => {
     };
 
     return (
-        <div className="flex flex-col md:flex-row gap-x-20 space-y-4" ref={containerRef}>
-            {/* Back button and mobile buttons - keeping original layout */}
-            <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row gap-x-20 relative" ref={containerRef}>
+            {/* Back button */}
+            <div className="sticky top-0 z-10 flex justify-between bg-black/50 backdrop-blur-sm py-4 md:py-0 md:bg-transparent md:backdrop-blur-none">
                 <div>
                     <Link
                         to={"/"}
@@ -228,52 +228,51 @@ const Projects = () => {
                         {/* <span>Back</span> */}
                     </Link>
                 </div>
-                <div className="sticky top-20 self-start md:hidden block">
+                <div className="md:hidden">
                     {renderSizeButtons()}
                 </div>
             </div>
 
             {/* Main content with projects */}
-            <motion.div
-                initial={animations.container.initial}
-                animate={animations.container.animate}
-                className="w-full"
-            >
-                {/* Portrait Section */}
-                <section 
-                    ref={portraitRef} 
-                    data-section="portrait"
-                    className="mb-20 pt-4"
-                    id="portrait-section"
+            <div className="w-full mt-4 md:mt-0">
+                <motion.div
+                    initial={animations.container.initial}
+                    animate={animations.container.animate}
+                    className="w-full"
                 >
-                    <h2 className="text-xl font-medium text-[#28E98C] mb-6">Portrait Projects</h2>
-                    {renderProjectSection("portrait")}
-                </section>
+                    {/* Portrait Section */}
+                    <section
+                        ref={portraitRef}
+                        data-section="portrait"
+                        className="mb-20 pt-4"
+                        id="portrait-section"
+                    >
+                        {renderProjectSection("portrait")}
+                    </section>
 
-                {/* Square Section */}
-                <section 
-                    ref={squareRef} 
-                    data-section="square"
-                    className="mb-20 pt-4"
-                    id="square-section"
-                >
-                    <h2 className="text-xl font-medium text-[#28E98C] mb-6">Square Projects</h2>
-                    {renderProjectSection("square")}
-                </section>
+                    {/* Square Section */}
+                    <section
+                        ref={squareRef}
+                        data-section="square"
+                        className="mb-20 pt-4"
+                        id="square-section"
+                    >
+                        {renderProjectSection("square")}
+                    </section>
 
-                {/* Landscape Section */}
-                <section 
-                    ref={landscapeRef} 
-                    data-section="landscape"
-                    className="mb-20 pt-4"
-                    id="landscape-section"
-                >
-                    <h2 className="text-xl font-medium text-[#28E98C] mb-6">Landscape Projects</h2>
-                    {renderProjectSection("landscape")}
-                </section>
-            </motion.div>
+                    {/* Landscape Section */}
+                    <section
+                        ref={landscapeRef}
+                        data-section="landscape"
+                        className="mb-20 pt-4"
+                        id="landscape-section"
+                    >
+                        {renderProjectSection("landscape")}
+                    </section>
+                </motion.div>
+            </div>
 
-            {/* Size selection buttons - keeping original position */}
+            {/* Size selection buttons for desktop - fixed position */}
             <div className="sticky top-20 self-start hidden md:block">
                 {renderSizeButtons()}
             </div>
