@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from "react";
-import StaggerAnimation from "./components/StaggerAnimation";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
@@ -16,18 +15,6 @@ const Projects = () => {
     const squareRef = useRef(null);
     const landscapeRef = useRef(null);
     const containerRef = useRef(null);
-
-    // Animation variants
-    const animations = {
-        container: {
-            initial: { opacity: 0 },
-            animate: { opacity: 1, transition: { duration: 1, delay: 0.5 } },
-        },
-        card: {
-            hidden: { y: -20, opacity: 0 },
-            visible: { y: 0, opacity: 1, transition: { duration: 0.4 } },
-        },
-    };
 
     const imageSizeClasses = {
         portrait: "aspect-[0.8] w-full max-w-xs mx-auto",
@@ -60,7 +47,6 @@ const Projects = () => {
                 }
 
                 const data = await response.json();
-                console.log("Fetched data:", data);
                 setProjects(data);
                 setIsLoading(false);
             } catch (error) {
@@ -73,60 +59,39 @@ const Projects = () => {
         fetchProjects();
     }, []);
 
-    // Set up scroll event listener for more reliable section detection
+    // Efficient section detection with IntersectionObserver
     useEffect(() => {
         if (!portraitRef.current || !squareRef.current || !landscapeRef.current) return;
 
-        const handleScroll = () => {
-            const portraitRect = portraitRef.current.getBoundingClientRect();
-            const squareRect = squareRef.current.getBoundingClientRect();
-            const landscapeRect = landscapeRef.current.getBoundingClientRect();
-
-            // Get the middle of the viewport
-            const viewportMiddle = window.innerHeight / 2;
-
-            // Calculate distance from viewport middle to each section's top
-            const portraitDistance = Math.abs(portraitRect.top - viewportMiddle);
-            const squareDistance = Math.abs(squareRect.top - viewportMiddle);
-            const landscapeDistance = Math.abs(landscapeRect.top - viewportMiddle);
-
-            // Find the section closest to the middle of the viewport
-            const minDistance = Math.min(portraitDistance, squareDistance, landscapeDistance);
-
-            if (minDistance === portraitDistance) {
-                setActiveSection("portrait");
-            } else if (minDistance === squareDistance) {
-                setActiveSection("square");
-            } else if (minDistance === landscapeDistance) {
-                setActiveSection("landscape");
-            }
-
-            // Alternative approach: check if sections are in viewport
-            const isInViewport = (element) => {
-                const rect = element.getBoundingClientRect();
-                return (
-                    rect.top <= (window.innerHeight / 2) &&
-                    rect.bottom >= (window.innerHeight / 3)
-                );
-            };
-
-            // Check each section and set active accordingly
-            if (isInViewport(squareRef.current)) {
-                setActiveSection("square");
-            } else if (isInViewport(portraitRef.current)) {
-                setActiveSection("portrait");
-            } else if (isInViewport(landscapeRef.current)) {
-                setActiveSection("landscape");
-            }
+        const observerOptions = {
+            rootMargin: "-20% 0px -20% 0px",
+            threshold: 0
         };
 
-        // Add scroll event listener
-        window.addEventListener('scroll', handleScroll);
-        // Initial check
-        handleScroll();
+        const sectionObserver = new IntersectionObserver((entries) => {
+            // Filter for the topmost visible section
+            const visibleEntries = entries.filter(entry => entry.isIntersecting);
+            
+            if (visibleEntries.length > 0) {
+                // Find the one closest to the top of viewport
+                const sorted = visibleEntries.sort((a, b) => {
+                    return a.boundingClientRect.top - b.boundingClientRect.top;
+                });
+                
+                const section = sorted[0].target.dataset.section;
+                if (section) {
+                    setActiveSection(section);
+                }
+            }
+        }, observerOptions);
+
+        // Observe all sections
+        sectionObserver.observe(portraitRef.current);
+        sectionObserver.observe(squareRef.current);
+        sectionObserver.observe(landscapeRef.current);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            sectionObserver.disconnect();
         };
     }, [isLoading]);
 
@@ -141,11 +106,17 @@ const Projects = () => {
         const sectionRef = sectionRefs[section];
 
         if (sectionRef.current) {
-            sectionRef.current.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            // Simple scroll with offset
+            const yOffset = -20;
+            const element = sectionRef.current;
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+            window.scrollTo({
+                top: y,
+                behavior: 'smooth'
             });
-            setActiveSection(section); // Immediately update active section on click
+            
+            setActiveSection(section);
         }
     };
 
@@ -163,19 +134,26 @@ const Projects = () => {
                     <button
                         key={button.size}
                         onClick={() => scrollToSection(button.size)}
-                        className={`${button.className} rounded-sm ${activeSection === button.size ? "bg-[#28E98C]" : "bg-[#94ACA1]"
-                            } transition-colors duration-300`}
-                        aria-label={`Scroll to ${button.size} images`}
+                        className={`${button.className} rounded-sm transition-colors duration-200 ${
+                            activeSection === button.size 
+                                ? "bg-[#28E98C]" 
+                                : "bg-[#94ACA1] hover:bg-[#94ACA1]/80"
+                        }`}
+                        aria-label={`View ${button.size} images`}
                     />
                 ))}
             </div>
         );
     };
 
-    // Render project section
+    // Render project section without stagger animations
     const renderProjectSection = (imageSize) => {
         if (isLoading) {
-            return <div className="text-center py-8">Loading projects...</div>;
+            return (
+                <div className="flex justify-center items-center py-8">
+                    <div className="w-8 h-8 border-4 border-[#28E98C]/20 border-t-[#28E98C] rounded-full animate-spin"></div>
+                </div>
+            );
         }
 
         if (error) {
@@ -189,18 +167,20 @@ const Projects = () => {
         }
 
         return (
-            <StaggerAnimation
-                key={imageSize}
-                classes={`grid ${getGridClasses(imageSize)} gap-4 md:gap-5 lg:gap-6`}
-            >
+            <div className={`grid ${getGridClasses(imageSize)} gap-4 md:gap-5 lg:gap-6`}>
                 {sectionProjects.map((project) => (
                     <motion.div
                         key={project.id}
-                        variants={animations.card}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ 
+                            opacity: 1,
+                            transition: { duration: 0.2 }
+                        }}
+                        viewport={{ once: true, margin: "-50px" }}
                         className="flex justify-center"
                     >
                         <div
-                            className={`border border-[#28E98C] rounded-xl overflow-hidden ${imageSizeClasses[imageSize]}`}
+                            className={`border border-[#28E98C] rounded-xl overflow-hidden transition-transform duration-200 hover:translate-y-[-2px] ${imageSizeClasses[imageSize]}`}
                         >
                             <img
                                 className="w-full h-full object-cover"
@@ -211,7 +191,7 @@ const Projects = () => {
                         </div>
                     </motion.div>
                 ))}
-            </StaggerAnimation>
+            </div>
         );
     };
 
@@ -222,10 +202,9 @@ const Projects = () => {
                 <div>
                     <Link
                         to={"/"}
-                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 text-sm font-medium text-[#28E98C] border-2 border-[#28E98C] rounded-full transition-all duration-300 hover:bg-[#28E98C]/10 focus:outline-none focus:ring-2 focus:ring-[#28E98C] focus:ring-offset-2 focus:ring-offset-gray-900"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 text-sm font-medium text-[#28E98C] border-2 border-[#28E98C] rounded-full transition-all duration-200 hover:bg-[#28E98C]/10 focus:outline-none focus:ring-2 focus:ring-[#28E98C]"
                     >
                         <ArrowLeft size={16} />
-                        {/* <span>Back</span> */}
                     </Link>
                 </div>
                 <div className="md:hidden">
@@ -235,16 +214,12 @@ const Projects = () => {
 
             {/* Main content with projects */}
             <div className="w-full mt-4 md:mt-0">
-                <motion.div
-                    initial={animations.container.initial}
-                    animate={animations.container.animate}
-                    className="w-full"
-                >
+                <div className="w-full">
                     {/* Portrait Section */}
                     <section
                         ref={portraitRef}
                         data-section="portrait"
-                        className="mb-20 pt-4"
+                        className="mb-20 pt-4 scroll-mt-12"
                         id="portrait-section"
                     >
                         {renderProjectSection("portrait")}
@@ -254,7 +229,7 @@ const Projects = () => {
                     <section
                         ref={squareRef}
                         data-section="square"
-                        className="mb-20 pt-4"
+                        className="mb-20 pt-4 scroll-mt-12"
                         id="square-section"
                     >
                         {renderProjectSection("square")}
@@ -264,12 +239,12 @@ const Projects = () => {
                     <section
                         ref={landscapeRef}
                         data-section="landscape"
-                        className="mb-20 pt-4"
+                        className="mb-20 pt-4 scroll-mt-12"
                         id="landscape-section"
                     >
                         {renderProjectSection("landscape")}
                     </section>
-                </motion.div>
+                </div>
             </div>
 
             {/* Size selection buttons for desktop - fixed position */}
