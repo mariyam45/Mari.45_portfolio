@@ -41,11 +41,12 @@ const Profile = () => {
         </a>
         {/* _______________________  */}
         <a
-          href="https://www.behance.net/mariofficial"
+          href="https://mari-45-portfolio.vercel.app/projects"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <box-icon type="logo" name="behance" color="#999999"></box-icon>
+          {/* <box-icon type="logo" name="behance" color="#999999"></box-icon> */}
+          <box-icon type='solid' name='landscape' color="#999999"></box-icon>
         </a>
         {/* ______________________  */}
 
