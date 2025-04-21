@@ -124,8 +124,22 @@
         "img": "https://i.ibb.co.com/PGky87yb/design-3.webp"
       },
 
-
-
+      {
+        "id": 20,
+        "name": "Square Project 2",
+        "img": "https://i.ibb.co.com/BHN1JJNN/slide-1.webp"
+      },
+      {
+        "id": 21,
+        "name": "Square Project 1",
+        "img": "https://i.ibb.co.com/WNNKVSSB/slide-2.webp"
+      },
+      {
+        "id": 22,
+        "name": "Square Project 2",
+        "img": "https://i.ibb.co.com/svrhFv74/slide-3.webp"
+      },
+      
       {
         "id": 20,
         "name": "Square Project 2",
@@ -157,23 +171,6 @@
         "img": "https://i.ibb.co.com/vCvv828P/05.jpg"
       },
 
-
-
-      {
-        "id": 20,
-        "name": "Square Project 2",
-        "img": "https://i.ibb.co.com/BHN1JJNN/slide-1.webp"
-      },
-      {
-        "id": 21,
-        "name": "Square Project 1",
-        "img": "https://i.ibb.co.com/WNNKVSSB/slide-2.webp"
-      },
-      {
-        "id": 22,
-        "name": "Square Project 2",
-        "img": "https://i.ibb.co.com/svrhFv74/slide-3.webp"
-      },
       {
         "id": 23,
         "name": "Square Project 1",
