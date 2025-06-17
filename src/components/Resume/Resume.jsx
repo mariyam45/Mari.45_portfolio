@@ -21,6 +21,31 @@ const Resume = () => {
         Education & <span>Experience</span>
       </h1>
 
+
+ {/* ___________________> */}
+      <div
+        className="edu1 "
+        data-aos="fade-right"
+        data-aos-duration="600"
+        // data-aos-offset="100"
+        data-aos-easing="linear"
+      >
+        <div className="icons">
+          <FontAwesomeIcon icon={faCircle} />
+        </div>
+        <div className="edu_dtls text-start ">
+          <p>
+            27<sup>th</sup> May, 2025 - Continue {" "}
+          </p>
+          <h3 className="text-2xl md:text-4xl my-2">
+           Graphics Designer
+          </h3>
+          <h6 className="inst">Get Levrg Bangladesh</h6>
+        </div>
+      </div>
+
+      {/* ___________________> */}
+
       {/* ___________________> */}
       <div
         className="edu1 "
@@ -34,7 +59,7 @@ const Resume = () => {
         </div>
         <div className="edu_dtls text-start ">
           <p>
-            1<sup>st</sup> August, 2024 - Continue {" "}
+            1<sup>st</sup> August, 2024 - 21<sup>th</sup> May, 2025{" "}
           </p>
           <h3 className="text-2xl md:text-4xl my-2">
            Visual Designer

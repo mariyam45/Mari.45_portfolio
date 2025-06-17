@@ -31,7 +31,7 @@ const Home = () => {
         data-tip="GET MY CV"
       >
         <a
-          href="https://drive.google.com/file/d/1OhgPSE_1gjay82HqJrdx2KU1ObBhSQPj/view?usp=sharing"
+          href="https://drive.google.com/file/d/1PHVvh_wGi3yKX9SCCG1juTZ-VS934Wax/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
