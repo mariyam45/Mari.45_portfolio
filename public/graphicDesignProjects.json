@@ -510,6 +510,16 @@
         "name": "Portrait Project 1",
         "img": "https://i.ibb.co.com/YF8MpXkG/b.webp"
       },
+       {
+        "id": 20,
+        "name": "Portrait Project 2",
+        "img": "https://i.ibb.co.com/4ZQ1TkDq/20.jpg"
+      },
+       {
+        "id": 21,
+        "name": "Portrait Project 2",
+        "img": "https://i.ibb.co.com/nqPgbqwd/21.jpg"
+      },
       {
         "id": 12,
         "name": "Portrait Project 2",
@@ -550,6 +560,8 @@
         "name": "Portrait Project 2",
         "img": "https://i.ibb.co.com/W4N64VNV/Cycle.webp"
       }
+      
+     
     
     ]
   },
