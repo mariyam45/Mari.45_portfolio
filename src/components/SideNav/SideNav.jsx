@@ -17,6 +17,7 @@ import "./SideNav.css";
 const SideNav = () => {
   return (
     <div className="sideBar md:fixed  right-0">
+      {/* a changes for testing the deployment */}
       {/* <div className="bx bx-menu" id="menu-icon"></div>
 
       <ul className="navbar">
