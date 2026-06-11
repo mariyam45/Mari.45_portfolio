@@ -63,6 +63,28 @@ const Skil = () => {
               // data-aos-offset="100"
               data-aos-easing="linear"
             >
+
+            <h4>InDesign</h4>
+            </div>
+
+            <div
+              className="skil_div"
+              data-aos="fade-up"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >  
+           <h4>Canva</h4>
+            </div>
+
+            <div
+              className="skil_div "
+              data-aos="fade-up"
+              data-aos-duration="600"
+              // data-aos-offset="100"
+              data-aos-easing="linear"
+            >
+
               <h4>Figma</h4>
             </div>
 

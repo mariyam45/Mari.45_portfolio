@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "boxicons";
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import myimg from "../../../public/assets/mari21.png";
+import myimg from "../../../public/assets/Marian-suchi-bg-hs.jpg";
 import "./Profile.css";
 
 const Profile = () => {
@@ -24,7 +24,7 @@ const Profile = () => {
         <span className="md:mt-3">Marian Suchi</span>
       </div>
 
-      <img className="h-3/5 mx-auto " src={myimg} alt="" />
+      <img className="h-3/5 mx-auto rounded-xl object-cover my-6 border-1 border-gray-300" src={myimg} alt=""  />
       <div className=" text-center my-5  md:my-5 mx-5 pro_status 2xl:px-10">
         {/* <p className="text-lg font-thin  md:text-start">Front-End Web Dev. /</p> */}
         <p className="text-lg font-thin md:text-center">Graphics Designer</p>
