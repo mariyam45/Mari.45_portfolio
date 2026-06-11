@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "boxicons";
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import myimg from "../../../public/assets/Marian-suchi-bg-hs.jpg";
+import myimg from "../../../public/assets/Marian-Suchi-bg-hs.jpg" ;
 import "./Profile.css";
 
 const Profile = () => {
